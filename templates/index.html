@@ -43,6 +43,14 @@ maximum-scale=1.0, minimum-scale=1.0">
            <th>日時</th>
            <th>メモ</th>
         </tr>
+        {% for ride in rides %}
+        <tr>
+          <td>{{ride.start}}</td>
+          <td>{{ride.finish}}</td>
+          <td>{{ride.created_at}}</td>
+          <td>{{ride.memo|nl2br}}</td>
+        </tr>
+        {% endfor %}
         <tr>
            <td>御嶽山</td>
            <td>代々木</td>
